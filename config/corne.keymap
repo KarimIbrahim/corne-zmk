@@ -42,9 +42,9 @@
 // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
 //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
                         bindings = <
-   &kp ESC              &kp Q &kp W         &kp E          &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSLH
-   U_LT(U_MEDIA, TAB)   &kp A U_MT(LALT, S) U_MT(LCTRL, D) &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
-   &kp LSHFT            &kp Z &kp X         &kp C          &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp RSHFT
+   &kp ESC    &kp Q &kp W         &kp E          &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSLH
+   &kp TAB    &kp A U_MT(LALT, S) U_MT(LCTRL, D) &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
+   &kp LSHFT  &kp Z &kp X         &kp C          &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp RSHFT
                   &kp LGUI &kp BSPC &kp SPACE   &kp RET &kp DEL &kp RGUI
                         >;
                 };
