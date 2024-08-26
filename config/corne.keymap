@@ -61,10 +61,10 @@
 			display-name = "Symbols";
 
                         bindings = <
-   &kp GRAVE  &kp EXCL  &kp AT            &kp HASH            &kp DLLR   &kp PRCNT  &kp CARET  &kp AMPS  &kp ASTRK  &kp LPAR         &kp RPAR  &kp MINUS
-   &trans     &kp MINUS U_MT(LALT, PLUS)  U_MT(LCTRL, UNDER)  &kp EQUAL  &trans     &kp LBRC   &kp RBRC  &kp RCTRL  U_MT(RALT, LBRC) &kp RBRC  &trans
-   &kp LSHFT  &trans    &trans            &trans              &trans     &trans     &kp LBKT   &kp RBKT  &trans     &kp LBKT         &kp RBKT  &kp RSHFT
-                        &kp LGUI          &kp BSPC            &kp SPACE  &kp RET    &kp DEL    &kp RGUI
+   &kp GRAVE  &kp EXCL   &kp AT            &kp HASH            &kp DLLR   &trans     &kp LBRC  &kp RBRC  &trans     &kp LPAR         &kp RPAR  &kp EQUAL
+   &trans     &kp MINUS  U_MT(LALT, PLUS)  U_MT(LCTRL, UNDER)  &kp ASTRK  &kp PRCNT  &kp LPAR  &kp RPAR  &kp RCTRL  U_MT(RALT, LBRC) &kp RBRC  &trans
+   &kp LSHFT  &trans     &trans            &kp CARET            &kp AMPS  &trans     &kp LBKT  &kp RBKT  &trans     &kp LBKT         &kp RBKT  &kp RSHFT
+                         &kp LGUI          &kp BSPC            &kp SPACE  &kp RET    &kp DEL   &kp RGUI
                         >;
                 };
 
