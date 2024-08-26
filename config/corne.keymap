@@ -73,7 +73,7 @@
                         bindings = <
    &bootloader  &trans   &trans    &trans     &trans  &trans     &trans    &trans    &trans    &trans     &trans      &bootloader
    &trans       &trans   &kp LALT  &kp LCTRL  &trans  &trans     &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT  &caps_word  &trans
-   &kp LSHFT    &trans   &trans    &trans     &trans  &trans     &trans    &trans    &trans    &trans     &trans &kp  kp RSHFT
+   &kp LSHFT    &trans   &trans    &trans     &trans  &trans     &trans    &trans    &trans    &trans     &trans      &kp RSHFT
                                    &kp LGUI   &BSPC   &kp SPACE  &kp RET   &kp DEL   &kp RGUI
                         >;
                 };
