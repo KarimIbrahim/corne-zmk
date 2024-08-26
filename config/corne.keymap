@@ -71,10 +71,10 @@
 			display-name = "Nav";
 
                         bindings = <
-   &bootloader  &trans   &trans    &trans     &trans  &trans     &trans    &trans    &trans    &trans     &trans      &bootloader
-   &trans       &trans   &kp LALT  &kp LCTRL  &trans  &trans     &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT  &caps_word  &trans
-   &kp LSHFT    &trans   &trans    &trans     &trans  &trans     &trans    &trans    &trans    &trans     &trans      &kp RSHFT
-                                   &kp LGUI   &BSPC   &kp SPACE  &kp RET   &kp DEL   &kp RGUI
+   &bootloader  &trans   &trans    &trans     &trans    &trans     &trans    &trans    &trans    &trans     &trans      &bootloader
+   &trans       &trans   &kp LALT  &kp LCTRL  &trans    &trans     &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT  &caps_word  &trans
+   &kp LSHFT    &trans   &trans    &trans     &trans    &trans     &trans    &trans    &trans    &trans     &trans      &kp RSHFT
+                                   &kp LGUI   &kp BSPC  &kp SPACE  &kp RET   &kp DEL   &kp RGUI
                         >;
                 };
 
@@ -84,10 +84,10 @@
 
                         bindings = <
 
-   &bootloader  &trans   &trans    &trans     &trans  &trans     &trans        &trans        &trans        &trans        &trans             &bootloader
-   &trans       &trans   &kp LALT  &kp LCTRL  &trans  &trans     &kp C_PREV    &kp C_VOL_DN  &kp C_VOL_UP  &kp C_NEXT    &ext_power EP_TOG  &trans
-   &kp LSHFT    &trans   &trans    &trans     &trans  &trans     &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &out OUT_TOG       &kp RSHFT
-                                   &kp LGUI   &BSPC   &kp SPACE  &kp C_PP      &kp C_STOP    &kp C_MUTE
+   &bootloader  &trans   &trans    &trans     &trans    &trans     &trans        &trans        &trans        &trans        &trans             &bootloader
+   &trans       &trans   &kp LALT  &kp LCTRL  &trans    &trans     &kp C_PREV    &kp C_VOL_DN  &kp C_VOL_UP  &kp C_NEXT    &ext_power EP_TOG  &trans
+   &kp LSHFT    &trans   &trans    &trans     &trans    &trans     &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &out OUT_TOG       &kp RSHFT
+                                   &kp LGUI   &kp BSPC  &kp SPACE  &kp C_PP      &kp C_STOP    &kp C_MUTE
                         >;
                 };
 
@@ -100,7 +100,7 @@
    &trans     &trans   &kp N7            &kp N8           &kp N9     &kp COMMA  &kp F12  &kp F7            &kp F8           &kp F9  &kp PSCRN  &trans
    &trans     &trans   U_MT(LALT, N4)    U_MT(LCTRL, N5)  &kp N6     &kp DOT    &kp F11  &U_MT(RCTRL, F4)  &U_MT(RALT, F5)  &kp F6  &trans     &trans
    &kp LSHFT  &trans   &kp N1            &kp N2           &kp N3     &kp N0     &kp F10  &kp F1            &kp F2           &kp F3  &trans     &kp RSHFT
-	               &kp LGUI          &BSPC            &kp SPACE  &kp RET    &kp DEL  &kp RGUI
+	               &kp LGUI          &kp BSPC         &kp SPACE  &kp RET    &kp DEL  &kp RGUI
 		        >;
 	        };
 
