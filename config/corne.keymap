@@ -12,6 +12,13 @@
 #define U_MT(MOD, TAP) &u_mt MOD TAP
 #define U_LT(LAYER, TAP) &u_lt LAYER TAP
 
+#define BASE 0
+#define SYM 1
+#define NAV 2
+#define MEDIA 3
+#define NUM 4
+
+
 / {
 	behaviors {
 
@@ -35,45 +42,67 @@
         keymap {
                 compatible = "zmk,keymap";
 
-                default_layer {
-// -----------------------------------------------------------------------------------------
-// |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
-// | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
-// | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
-//                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
+                base_layer {
+
+			display-name = "Base";
+
                         bindings = <
-   &kp ESC    &kp Q &kp W         &kp E          &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSLH
-   &kp TAB    &kp A U_MT(LALT, S) U_MT(LCTRL, D) &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
-   &kp LSHFT  &kp Z &kp X         &kp C          &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp RSHFT
-                  &kp LGUI &kp BSPC &kp SPACE   &kp RET &kp DEL &kp RGUI
-                        >;
-                };
-                lower_layer {
-// -----------------------------------------------------------------------------------------
-// |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
-// | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
-// | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
-//                    | GUI |     | SPC |   | ENT |     | ALT |
-                        bindings = <
-   &kp TAB    &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N6   &kp N7   &kp N8 &kp N9    &kp N0 &kp BSPC
-   &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &trans
-   &kp LSHFT  &trans       &trans       &trans       &trans       &trans         &trans   &trans   &trans &trans    &trans &trans
-                                    &kp LGUI     &trans       &kp SPACE      &kp RET  &trans   &kp RALT
+   &kp GRAVE    &kp Q  &kp W              &kp E            &kp R             &kp T    &kp Y           &kp U     &kp I           &kp O          &kp P     &kp BSLH
+   &kp TAB      &kp A  U_MT(LALT, S)      U_MT(LCTRL, D)   &kp F             &kp G    &kp H           &kp J     U_MT(RCTRL, K)  U_MT(RALT, L)  &kp SEMI  &kp SQT
+   &kp LSHFT    &kp Z  &kp X              &kp C            &kp V             &kp B    &kp N           &kp M     &kp COMMA       &kp DOT        &kp FSLH  &kp RSHFT
+                       U_LT(MEDIA, LGUI)  U_LT(NAV, BSPC)  U_LT(SYM, SPACE)  &kp RET  U_LT(NUM, DEL)  &kp RGUI
                         >;
                 };
 
-                raise_layer {
-// -----------------------------------------------------------------------------------------
-// |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
-// | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
-// | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
-//                    | GUI |     | SPC |   | ENT |     | ALT |
+                symbols_layer {
+
+			display-name = "Symbols";
+
                         bindings = <
-   &kp  TAB  &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS  &kp ASTRK &kp LPAR &kp RPAR &kp BSPC
-   &kp LCTRL &trans   &trans &trans   &trans   &trans      &kp MINUS &kp EQUAL &kp LBKT  &kp RBKT &kp BSLH &kp GRAVE
-   &kp LSHFT &trans   &trans &trans   &trans   &trans      &kp UNDER &kp PLUS  &kp LBRC  &kp RBRC &kp PIPE &kp TILDE
-                             &kp LGUI &trans   &kp SPACE   &kp RET   &trans    &kp RALT
+   &kp Grave  &kp EXCL  &kp AT            &kp HASH            &kp DLLR   &kp PRCNT  &kp CARET  &kp AMPS  &kp ASTRK  &kp LPAR         &kp RPAR  &kp Minus
+   &trans     &kp Minus U_MT(LALT, PLUS)  U_MT(LCTRL, UNDER)  &kp EQUAL  &trans     &trans     &trans    &kp RCTRL  U_MT(RALT, LBRC) &kp RBRC  &trans
+   &kp LSHFT  &trans    &trans            &trans              &trans     &trans     &trans     &trans    &trans     &kp LBKT         &kp RBKT  &kp RSHFT
+                        &kp LGUI          &kp BSPC            &kp SPACE  &kp RET    &kp DEL    &kp RGUI
                         >;
                 };
+
+                nav_layer {
+
+			display-name = "Nav";
+
+                        bindings = <
+   &bootloader  &trans   &trans    &trans     &trans  &trans     &trans    &trans    &trans    &trans     &trans      &bootloader
+   &trans       &trans   &kp LALT  &kp LCTRL  &trans  &trans     &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT  &caps_word  &trans
+   &kp LSHFT    &trans   &trans    &trans     &trans  &trans     &trans    &trans    &trans    &trans     &trans &kp  kp RSHFT
+                                   &kp LGUI   &BSPC   &kp SPACE  &kp RET   &kp DEL   &kp RGUI
+                        >;
+                };
+
+                media_layer {
+
+			display-name = "Media";
+
+                        bindings = <
+
+   &bootloader  &trans   &trans    &trans     &trans  &trans     &trans      &trans        &trans        &trans      &trans             &bootloader
+   &trans       &trans   &kp LALT  &kp LCTRL  &trans  &trans     &kp C_PREV  &kp C_VOL_DN  &kp C_VOL_UP  &kp C_NEXT  &ext_power EP_TOG  &trans
+   &kp LSHFT    &trans   &trans    &trans     &trans  &trans     &trans      &trans        &trans        &trans      &out OUT_TOG       &kp RSHFT
+                                   &kp LGUI   &BSPC   &kp SPACE  &kp C_PP    &kp C_STOP    &kp C_MUTE
+                        >;
+                };
+
+		num_layer {
+
+			display-name = "Num";
+
+			bindings = <
+
+   &trans     &trans   &kp N7            &kp N8           &kp N9     &kp COMMA  &kp F12  &kp F7    &kp F8  &kp F9  &kp PSCRN  &trans
+   &trans     &trans   U_MT(LALT, N4)    U_MT(LCTRL, N5)  &kp N6     &kp DOT    &kp F11  &kp F4    &kp F5  &kp F6  &trans     &trans
+   &kp LSHFT  &trans   &kp N1            &kp N2           &kp N3     &kp N0     &kp F10  &kp F1    &kp F2  &kp F3  &trans     &kp RSHFT
+	               &kp LGUI          &BSPC            &kp SPACE  &kp RET    &kp DEL  &kp RGUI
+		        >;
+	        };
+
         };
 };
