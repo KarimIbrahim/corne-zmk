@@ -49,10 +49,10 @@
 			display-name = "Base";
 
                         bindings = <
-   &kp GRAVE    &kp Q  &kp W              &kp E            &kp R             &kp T    &kp Y           &kp U     &kp I           &kp O          &kp P     &kp BSLH
-   &kp TAB      &kp A  U_MT(LALT, S)      U_MT(LCTRL, D)   &kp F             &kp G    &kp H           &kp J     U_MT(RCTRL, K)  U_MT(RALT, L)  &kp SEMI  &kp SQT
-   &kp LSHFT    &kp Z  &kp X              &kp C            &kp V             &kp B    &kp N           &kp M     &kp COMMA       &kp DOT        &kp FSLH  &kp RSHFT
-                       U_LT(MEDIA, ESC)  U_LT(NAV, BSPC)  U_LT(SYM, SPACE)  &kp RET  U_LT(NUM, DEL)  &kp RGUI
+   &kp GRAVE    &kp Q  &kp W             &kp E            &kp R             &kp T    &kp Y    &kp U     &kp I           &kp O          &kp P     &kp EQUAL
+   &kp TAB      &kp A  U_MT(LALT, S)     U_MT(LCTRL, D)   &kp F             &kp G    &kp H    &kp J     U_MT(RCTRL, K)  U_MT(RALT, L)  &kp SEMI  &kp SQT
+   &kp LSHFT    &kp Z  &kp X             &kp C            &kp V             &kp B    &kp N    &kp M     &kp COMMA       &kp DOT        &kp FSLH  &kp RSHFT
+                       U_LT(MEDIA, ESC)  U_LT(NAV, BSPC)  U_LT(SYM, SPACE)  &kp RET  &mo NUM  &kp RGUI
                         >;
                 };
 
@@ -60,21 +60,11 @@
 
 			display-name = "Symbols";
 
-   //                      bindings = <
-   // &kp GRAVE  &kp EXCL   &kp AT            &kp HASH            &kp DLLR   &trans     &trans   &kp LBRC  &kp RBRC           &kp LPAR          &kp RPAR  &kp EQUAL
-   // &trans     &kp MINUS  U_MT(LALT, PLUS)  U_MT(LCTRL, UNDER)  &kp ASTRK  &kp PRCNT  &trans   &kp LPAR  U_MT(RCTRL, RPAR)  U_MT(RALT, LBRC)  &kp RBRC  &trans
-   // &kp LSHFT  &trans     &trans            &kp CARET            &kp AMPS  &trans     &trans   &kp LBKT  &kp RBKT           &kp LBKT          &kp RBKT  &kp RSHFT
-   //                       &kp LGUI          &kp BSPC            &kp SPACE  &kp RET    &kp DEL  &kp RGUI
-   //                      >;
-   //              };
-   //
-
-
                         bindings = <
-   &kp GRAVE  &kp EXCL   &kp AT            &kp UNDER           &kp PRCNT  &trans    &trans   &kp LBRC  &kp RBRC           &kp LPAR          &kp RPAR  &kp EQUAL
-   &kp TILDE  &kp MINUS  U_MT(LALT, PLUS)  U_MT(LCTRL, CARET)  &kp ASTRK  &kp HASH  &trans   &kp LPAR  U_MT(RCTRL, RPAR)  U_MT(RALT, LBRC)  &kp RBRC  &trans
-   &kp LSHFT  &trans     &trans            &kp DLLR            &kp AMPS   &trans    &trans   &kp LBKT  &kp RBKT           &kp LBKT          &kp RBKT  &kp RSHFT
-                         &kp LGUI          &kp BSPC            &kp SPACE  &kp RET   &kp DEL  &kp RGUI
+   &trans     &kp EXCL   &kp AT             &kp UNDER          &kp PRCNT  &trans    &trans   &trans    &trans              &kp LPAR          &kp RPAR  &kp BSLH
+   &trans     &kp MINUS  U_MT(LALT, CARET)  U_MT(LCTRL, DLLR)  &kp HASH   &trans    &trans   &kp AMPS  U_MT(RCTRL, ASTRK)  U_MT(RALT, LBRC)  &kp RBRC  &trans
+   &kp LSHFT  &trans     &trans             &trans             &trans     &trans    &trans   &trans    &trans              &kp LBKT          &kp RBKT  &kp RSHFT
+                         &kp LGUI           &kp BSPC           &kp SPACE  &kp RET   &trans   &kp RGUI
                         >;
                 };
 
@@ -87,7 +77,7 @@
    &bootloader  &trans   &trans    &trans     &trans    &trans     &trans    &trans    &trans    &trans     &trans      &bootloader
    &trans       &trans   &kp LALT  &kp LCTRL  &trans    &trans     &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT  &caps_word  &trans
    &kp LSHFT    &trans   &trans    &trans     &trans    &trans     &trans    &trans    &trans    &trans     &trans      &kp RSHFT
-                                   &kp LGUI   &kp BSPC  &kp SPACE  &kp RET   &kp DEL   &kp RGUI
+                                   &kp LGUI   &kp BSPC  &kp SPACE  &kp RET   &trans    &kp RGUI
                         >;
                 };
 
@@ -113,7 +103,7 @@
    &trans     &trans   &kp N7            &kp N8           &kp N9     &kp COMMA  &kp F12  &kp F7           &kp F8          &kp F9  &kp PSCRN  &trans
    &trans     &trans   U_MT(LALT, N4)    U_MT(LCTRL, N5)  &kp N6     &kp DOT    &kp F11  U_MT(RCTRL, F4)  U_MT(RALT, F5)  &kp F6  &trans     &trans
    &kp LSHFT  &trans   &kp N1            &kp N2           &kp N3     &kp N0     &kp F10  &kp F1           &kp F2          &kp F3  &trans     &kp RSHFT
-	               &kp LGUI          &kp BSPC         &kp SPACE  &kp RET    &kp DEL  &kp RGUI
+	               &kp LGUI          &kp BSPC         &kp SPACE  &kp RET    &trans   &kp RGUI
 		        >;
 	        };
 
