@@ -49,10 +49,10 @@
 			display-name = "Base";
 
                         bindings = <
-   &kp GRAVE    &kp Q  &kp W             &kp E            &kp R             &kp T    &kp Y    &kp U     &kp I           &kp O          &kp P     &kp EQUAL
-   &kp TAB      &kp A  U_MT(LALT, S)     U_MT(LCTRL, D)   &kp F             &kp G    &kp H    &kp J     U_MT(RCTRL, K)  U_MT(RALT, L)  &kp SEMI  &kp SQT
-   &kp LSHFT    &kp Z  &kp X             &kp C            &kp V             &kp B    &kp N    &kp M     &kp COMMA       &kp DOT        &kp FSLH  &kp RSHFT
-                       U_LT(MEDIA, ESC)  U_LT(NAV, BSPC)  U_LT(SYM, SPACE)  &kp RET  &mo NUM  &kp RGUI
+   &kp GRAVE    &kp Q  &kp W          &kp E           &kp R             &kp T             &kp Y            &kp U     &kp I           &kp O          &kp P     &kp EQUAL
+   &kp TAB      &kp A  U_MT(LALT, S)  U_MT(LCTRL, D)  &kp F             &kp G             &kp H            &kp J     U_MT(RCTRL, K)  U_MT(RALT, L)  &kp SEMI  &kp SQT
+   &kp LSHFT    &kp Z  &kp X          &kp C           &kp V             &kp B             &kp N            &kp M     &kp COMMA       &kp DOT        &kp FSLH  &kp RSHFT
+                       &kp LGUI       U_LT(NAV, ESC)  U_LT(SYM, SPACE)  U_LT(MEDIA, RET)  U_LT(NUM, BSPC)  &kp RGUI
                         >;
                 };
 
@@ -87,10 +87,10 @@
 
                         bindings = <
 
-   &bootloader  &trans   &trans    &trans     &trans    &trans     &trans        &trans        &trans        &trans        &trans             &bootloader
-   &trans       &trans   &kp LALT  &kp LCTRL  &trans    &trans     &kp C_PREV    &kp C_VOL_DN  &kp C_VOL_UP  &kp C_NEXT    &ext_power EP_TOG  &trans
-   &kp LSHFT    &trans   &trans    &trans     &trans    &trans     &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &out OUT_TOG       &kp RSHFT
-                                   &kp LGUI   &kp BSPC  &kp SPACE  &kp C_PP      &kp C_STOP    &kp C_MUTE
+   &bootloader  &trans   &trans    &trans       &trans      &trans    &trans        &trans        &trans        &trans        &trans             &bootloader
+   &trans       &trans   &kp LALT  &kp LCTRL    &trans      &trans    &kp C_PREV    &kp C_VOL_DN  &kp C_VOL_UP  &kp C_NEXT    &ext_power EP_TOG  &trans
+   &kp LSHFT    &trans   &trans    &trans       &trans      &trans    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &out OUT_TOG       &kp RSHFT
+                                   &kp C_MUTE   &kp C_STOP  &kp C_PP  &kp C_PP      &kp C_STOP    &kp C_MUTE
                         >;
                 };
 
